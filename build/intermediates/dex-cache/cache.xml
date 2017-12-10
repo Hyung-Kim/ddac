@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="aa66215e4a433d32b00bf179fb330737486a3290">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_e963620bf0638d57ec9050be74ea7025efcee07b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\TaeHyungKim\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.1_f9cf8c52cfde69cc6d73c96ade5e8e89eb31d1f6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\TaeHyungKim\.android\build-cache\48dbc7a3862be207b90f46b05e5110eb489b33d8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8e828a1d413018ac3297ded214bc978160980371\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\TaeHyungKim\.android\build-cache\539ffeb7061b6c3ee41cb5998e7241d2a57d1229\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_833077d15f52bd12ab2aa5e4632487095f58ca1e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_1eb3d4bc37ec56b9a4459fb54982393045de9f43\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\TaeHyungKim\.android\build-cache\1cc8e3d6ecec0bd9b5a175474e9ac03d1c86d092\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e15640540effe76085dc7d12bff9a7ee4e5533e8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\TaeHyungKim\.android\build-cache\1871055dbb5de35cc7ab6c24c39a5c99d2784fc7\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_00264be3a5fa62f3280d41704be1c77963fb4008\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\TaeHyungKim\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_25013109869bc79192d4004228295ab6be122a33\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\TaeHyungKim\.android\build-cache\117e1fd5bbc098136727f8aa4951ecaaa9be3b80\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b5add95afed6f7407b8550892898c70f42acdb7f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\TaeHyungKim\.android\build-cache\7608564f69415c584b5cb4f83e80cd3290b0fd0d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_36d22a77f211c33c019ec58913daeb9feb2316ec\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\TaeHyungKim\.android\build-cache\585d99db2388e28da372a24d5ba492ec141c2ff2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_77d068c84c693842966ab3ec41d5cec7b8f6ed17\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\TaeHyungKim\.android\build-cache\39a6d361088a696f20938a82d0180d8ec42dbd97\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_49b30b7069341c8bb5653f667021e7f09b408386\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\TaeHyungKim\.android\build-cache\f1e5fc1186168265fbf19a6d6dba665962289711\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ca3e313148a83ced37608e648425844b4f74ab50\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\TaeHyungKim\.android\build-cache\3d02b8654faedee5e55ec3fc46ec16a01683f4bf\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a1f1544cb8a82910bf64cea653b4a6eb9f132f79\classes.dex" />
+    </item>
+
+</items>

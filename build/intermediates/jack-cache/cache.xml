@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\TaeHyungKim\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        revision="26.0.1"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\support-annotations-26.0.0-alpha1-ac44bc0a76d5fbacac53fe818ce3aba6f1766c73.jar" />
+    </item>
+    <item
+        jar="C:\Users\TaeHyungKim\.android\build-cache\3793b8f04198d1fd58b958b96b425d399ea3fc7f\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-06d961094910bee78bfe1de8042cb9b2194e13f4.jar" />
+    </item>
+    <item
+        jar="C:\Users\TaeHyungKim\.android\build-cache\48dbc7a3862be207b90f46b05e5110eb489b33d8\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-8e828a1d413018ac3297ded214bc978160980371.jar" />
+    </item>
+    <item
+        jar="C:\Users\TaeHyungKim\.android\build-cache\b472a3d18a33983636575e0250d5cdea76ee2639\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-394f919f4fcac2df2258ab8a99ac5d3114b1db63.jar" />
+    </item>
+    <item
+        jar="C:\Users\TaeHyungKim\.android\build-cache\057a1bb66bb5aaba334f0a41772522c3d324a1d5\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-f6f03eb00f8057681f4c31979126928b86d102b7.jar" />
+    </item>
+    <item
+        jar="C:\Users\TaeHyungKim\.android\build-cache\1c531c93d6af64b161c8337481b8e3afdfe77c55\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-daa3b606bde980e464507665aa7326205fa13196.jar" />
+    </item>
+    <item
+        jar="C:\Users\TaeHyungKim\.android\build-cache\4832120b9c09f3857095d581679700f37c463797\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-5b4a1f98a400e1091c4cd1df9563f75cd3c2380b.jar" />
+    </item>
+    <item
+        jar="C:\Users\TaeHyungKim\.android\build-cache\81d551d99bfbd6f25d33c2b193ac45760995c211\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-7111e24347d20e658f6519c592d99ff11177faa4.jar" />
+    </item>
+    <item
+        jar="C:\Users\TaeHyungKim\.android\build-cache\936ef5d9084c63610044fcc3a630a034e26fb561\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-499fbffb1bc9bc8afbe380b1f7c79c4dfcf7e521.jar" />
+    </item>
+    <item
+        jar="C:\Users\TaeHyungKim\.android\build-cache\36ca4472d44e8d2b23a0659f2a64edd55502567f\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-2d171f524cdf9263f2e0697fa4660efaed388971.jar" />
+    </item>
+    <item
+        jar="C:\Users\TaeHyungKim\.android\build-cache\8c0cf23db6b3b19a817ca5fdc3ff2062008483a4\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-653ba8660ca4a8c9e3357da6147711a828fa6ff3.jar" />
+    </item>
+    <item
+        jar="C:\Users\TaeHyungKim\.android\build-cache\54208aebb67c9d7da290ab537217a0c59e3d905c\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="e176fd06c2ad5b50a2f5cb4de6000a83a7cb48f5">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-cecd30433833430d059a175741d32fc4b9512a44.jar" />
+    </item>
+    <item
+        jar="C:\Users\TaeHyungKim\.android\build-cache\827eac7634c34ebb0ee786dff5bc3488bf45f616\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-df911a9af37a4c58de3754f0b18e6845f6fe7cdf.jar" />
+    </item>
+    <item
+        jar="C:\Users\TaeHyungKim\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\constraint-layout-solver-1.0.2-25013109869bc79192d4004228295ab6be122a33.jar" />
+    </item>
+
+</items>

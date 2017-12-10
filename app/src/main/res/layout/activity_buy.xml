@@ -3,14 +3,9 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:paddingTop="8dp"
-    android:paddingBottom="8dp"
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:background="#ffffff">
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_marginBottom="20dp"
@@ -31,4 +26,12 @@
             android:textColor="#000000"
             android:textSize="34sp" />
     </RelativeLayout>
+    <ExpandableListView
+        android:layout_marginTop="20dp"
+        android:id="@+id/expandableListView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+        android:divider="#99808080"
+        android:dividerHeight="0.75dp" />
 </LinearLayout>

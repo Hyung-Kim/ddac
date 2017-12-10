@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity {
         resourceInit();
         registerListener();
 
-        //테스트용
+        /*
         this.finish();
-        Intent intent = new Intent(this, DDACMainActivity.class);
-        startActivity(intent);
+        Intent intent = new Intent(this, BuyActivity.class);
+        startActivity(intent);*/
     }
 
     View.OnClickListener loginClickListener = (v) -> {

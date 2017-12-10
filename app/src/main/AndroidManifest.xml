@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".BuyActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ProductInformationActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".DDACMainActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".FindUserInfoActivity"

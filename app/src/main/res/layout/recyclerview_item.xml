@@ -1,31 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:background="#ffffff"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <android.support.v7.widget.CardView
+        android:layout_marginBottom="16dp"
         android:id="@+id/cardview"
-        card:cardCornerRadius="3dp"
+        card:cardCornerRadius="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
+            android:background="#ffffff"
             android:layout_height="wrap_content">
             <ImageView
                 android:scaleType="fitXY"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="200dp"
+                android:layout_height="250dp"
+                android:src="@drawable/product_list_1"
                 android:id="@+id/image"/>
-            <TextView
-                android:id="@+id/textview"
-                android:gravity="center|left"
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:padding="10dp"/>
+                android:orientation="vertical"
+                android:background="#ffffff"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="26sp"
+                    android:text="누명"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="wrap_content" />
+                <ImageView
+                    android:id="@+id/tvDivider"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/contents_divider"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="wrap_content" />
+                <TextView
+                    android:id="@+id/tvType"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="5dp"
+                    android:text="스릴러, 서스펜스, 반전"
+                    android:layout_width="wrap_content" />
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="5dp"
+                    android:text="약 8시간 소요"
+                    android:layout_width="wrap_content" />
+                <TextView
+                    android:id="@+id/tvDistance"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="5dp"
+                    android:text="총 이동거리 12.8km"
+                    android:layout_width="wrap_content" />
+                <TextView
+                    android:id="@+id/tvAccmulate"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:text="누적 4,812명"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="wrap_content" />
+                <Button
+                    android:id="@+id/btnBuy"
+                    android:layout_height="28dp"
+                    android:textColor="#ffffff"
+                    android:background="#ff0000"
+                    android:textSize="21sp"
+                    android:layout_marginLeft="5dp"
+                    android:text="구매하기"
+                    android:layout_width="100dp" />
+            </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </RelativeLayout>

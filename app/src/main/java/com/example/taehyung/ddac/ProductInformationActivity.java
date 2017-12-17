@@ -2,11 +2,17 @@ package com.example.taehyung.ddac;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.example.taehyung.ddac.DataBase.DbOpenHelper;
+import com.example.taehyung.ddac.Item.BoughtProduct;
+
+import java.util.List;
 
 /**
  * Created by TaeHyungKim on 2017-12-10.
@@ -35,8 +41,16 @@ public class ProductInformationActivity extends AppCompatActivity {
     View.OnClickListener moreVideoClickListener = (v) -> Toast.makeText(this,"등록되어 있는 동영상이 없습니다.",Toast.LENGTH_SHORT).show();
     View.OnClickListener prepareImageClickListener = (v) -> Toast.makeText(this,"동영상을 불러올 수 없습니다.",Toast.LENGTH_SHORT).show();
     View.OnClickListener buyClickListener = (v) -> {
-        Intent intent = new Intent(this, BuyActivity.class);
-        startActivity(intent);
+        DbOpenHelper DbOpenHelper = new DbOpenHelper(v.getContext());
+        DbOpenHelper.open(v.getContext());
+        List<BoughtProduct> boughtProducts = DbOpenHelper.getBoughtProductList();
+        if(boughtProducts.size() == 1)
+            Toast.makeText(v.getContext(),"이미 1개의 패키지를 구매하셨습니다.",Toast.LENGTH_SHORT).show();
+        else {
+            BottomNavigationView bottomNavigationView = (BottomNavigationView) ((DDACMainActivity) v.getContext()).findViewById(R.id.navigation);
+            bottomNavigationView.setSelectedItemId(R.id.action_item3);
+            DbOpenHelper.addProducts(1,5);
+        }
     };
     public void resourceInit(){
         btnBack = (Button)findViewById(R.id.backButton);

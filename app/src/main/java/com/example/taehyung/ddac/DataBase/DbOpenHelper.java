@@ -16,20 +16,11 @@ import java.util.List;
  */
 
 public class DbOpenHelper {
-
-
-
-    private static final String DATABASE_NAME = "my_products.db";
-
+    private static final String DATABASE_NAME = "my_products";
     private static final int DATABASE_VERSION = 1;
-
     public static SQLiteDatabase mDB;
-
     private DatabaseHelper mDBHelper;
-
     private Context mCtx;
-
-
 
     private class DatabaseHelper extends SQLiteOpenHelper {
         // 생성자
@@ -55,20 +46,31 @@ public class DbOpenHelper {
         this.mCtx = context;
     }
 
-    public DbOpenHelper open() throws SQLException {
+    public DbOpenHelper open(Context ctx) throws SQLException {
+        if(mDBHelper!=null)
+            mDBHelper.close();
+        this.mCtx = ctx;
         mDBHelper = new DatabaseHelper(mCtx, DATABASE_NAME, null, DATABASE_VERSION);
         mDB = mDBHelper.getWritableDatabase();
         return this;
     }
     public List<BoughtProduct> getBoughtProductList() {
         StringBuffer sb = new StringBuffer();
-        sb.append(" SELECT _ID, NAME, AGE, PHONE FROM TEST_TABLE ");
+        sb.append(" SELECT * FROM ddac ");
         SQLiteDatabase db = mDBHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(sb.toString(), null);
         List<BoughtProduct> products = new ArrayList();
         while( cursor.moveToNext() )
             products.add(new BoughtProduct(cursor.getInt(0), cursor.getInt(1), cursor.getString(2), cursor.getInt(3)));
         return products;
+    }
+    public void addProducts(int id, int level) {
+        SQLiteDatabase db = mDBHelper.getWritableDatabase();
+        StringBuffer sb = new StringBuffer();
+        sb.append(" INSERT INTO ddac ( ");
+        sb.append(" contents_id, current_level) ");
+        sb.append(" VALUES ( "+id+", "+level+") ");
+        db.execSQL(sb.toString());
     }
     public void close(){
         mDB.close();

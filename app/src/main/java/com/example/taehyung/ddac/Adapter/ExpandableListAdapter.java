@@ -9,6 +9,9 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.taehyung.ddac.DataBase.DbOpenHelper;
+
+import com.example.taehyung.ddac.Item.BoughtProduct;
 import com.example.taehyung.ddac.R;
 
 import java.util.ArrayList;
@@ -21,13 +24,14 @@ import java.util.List;
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
-    private Context context;
+    public static Context context;
     private List<String> ParentItem;
-    private HashMap<String, List<String>> ChildItem;
-
+    private HashMap<String, Integer> ChildItem;
+    public static DbOpenHelper DbOpenHelper;
+    public static List<BoughtProduct> boughtProducts;
 
     public ExpandableListAdapter(Context context, List<String> ParentItem,
-                                 HashMap<String, List<String>> ChildItem) {
+                                 HashMap<String, Integer> ChildItem) {
         this.context = context;
         this.ParentItem = ParentItem;
         this.ChildItem = ChildItem;
@@ -35,8 +39,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public Object getChild(int listPosition, int expandedListPosition) {
-        return this.ChildItem.get(this.ParentItem.get(listPosition))
-                .get(expandedListPosition);
+        return this.ChildItem.get(this.ParentItem.get(listPosition));
     }
 
     @Override
@@ -47,23 +50,20 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     @Override
     public View getChildView(int listPosition, final int expandedListPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
-        final String expandedListText = (String) getChild(listPosition, expandedListPosition);
+        final int expandedListText = (Integer)getChild(listPosition, expandedListPosition);
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) this.context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.child_item, null);
         }
-        TextView text1 = (TextView) convertView.findViewById(R.id.item1);
-        TextView text2 = (TextView) convertView.findViewById(R.id.item2);
-        text1.setText(""+expandedListPosition);
-        text2.setText(""+expandedListText);
+        ImageView img1 = (ImageView) convertView.findViewById(R.id.item1);
+        img1.setImageResource(expandedListText);
         return convertView;
     }
 
     @Override
     public int getChildrenCount(int listPosition) {
-        return this.ChildItem.get(this.ParentItem.get(listPosition))
-                .size();
+        return 1;
     }
 
     @Override
@@ -114,14 +114,45 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     }
 
 
-    public static HashMap<String, List<String>> getData() {
-        HashMap<String, List<String>> ParentItem = new HashMap<String, List<String>>();
+    public static HashMap<String, Integer> getData(Context ctx) {
+        HashMap<String, Integer> ParentItem = new HashMap<String, Integer>();
+        Integer child1 = new Integer(R.drawable.first_question);
+        Integer child2 = new Integer(R.drawable.second_question);
+        Integer child3 = new Integer(R.drawable.three_question);
+        Integer child4 = new Integer(R.drawable.four_question);
+        Integer child5 = new Integer(R.drawable.five_question);
+        Integer child6 = new Integer(R.drawable.six_question);
 
-        List<String> openingText = new ArrayList<String>();
-        openingText.add("오프닝 영상을 감상하세요.");
-        ParentItem.put("오프닝 영상을 감상하세요.", openingText);
-
-        return ParentItem;
+        DbOpenHelper = new DbOpenHelper(context);
+        DbOpenHelper.open(ctx);
+        boughtProducts = DbOpenHelper.getBoughtProductList();
+        if(boughtProducts.size() != 0) {
+            BoughtProduct boughtProduct = boughtProducts.get(0);
+            if (boughtProduct.getLevel() <= 1) {
+                ParentItem.put("오프닝 영상을 감상하세요.", child1);
+            }
+            if (boughtProduct.getLevel() <= 2) {
+                ParentItem.put("Detail. \\n 다음 단서가 가리키는 장소로 이동하세요.", child2);
+            }
+            if (boughtProduct.getLevel() <= 3) {
+                ParentItem.put("추천식당에서 식사를 하세요(10% 할인)", -1);
+            }
+            if (boughtProduct.getLevel() <= 4) {
+                ParentItem.put("퀘스트 '성서로운 돌'이(가) 생성되었습니다.", child3);
+            }
+            if (boughtProduct.getLevel() <= 5) {
+                ParentItem.put("퀘스트 '조력자 컨택'이 생성되었습니다.", child4);
+            }
+            if (boughtProduct.getLevel() <= 6) {
+                ParentItem.put("퀘스트 '어둠 속 빛 한줄기'이(가) 생성되었습니다.", child5);
+            }
+            if (boughtProduct.getLevel() <= 7) {
+                ParentItem.put("퀘스트 '나라의 운명'이(가) 생성되었습니다.", child6);
+            }
+            return ParentItem;
+        }else
+            ParentItem.put("오프닝 영상을 감상하세요.", child1);
+            return ParentItem;
     }
 }
 

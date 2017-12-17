@@ -4,10 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,15 +13,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.taehyung.ddac.BuyActivity;
 import com.example.taehyung.ddac.DDACMainActivity;
 import com.example.taehyung.ddac.DataBase.DbOpenHelper;
-import com.example.taehyung.ddac.Fragment.DdacFragment;
+import com.example.taehyung.ddac.Item.BoughtProduct;
 import com.example.taehyung.ddac.Item.ProductItem;
 import com.example.taehyung.ddac.ProductInformationActivity;
 import com.example.taehyung.ddac.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by TaeHyungKim on 2017-12-10.
@@ -61,10 +58,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     // Return the size of your dataset (invoked by the layout manager)
     View.OnClickListener buyClickListener = (View v) -> {
-        BottomNavigationView bottomNavigationView = (BottomNavigationView)((DDACMainActivity)v.getContext()).findViewById(R.id.navigation);
-        bottomNavigationView.setSelectedItemId(R.id.action_item3);
         DbOpenHelper DbOpenHelper = new DbOpenHelper(v.getContext());
-        DbOpenHelper.open();
+        DbOpenHelper.open(context);
+        List<BoughtProduct> boughtProducts = DbOpenHelper.getBoughtProductList();
+        if(boughtProducts.size() == 1)
+            Toast.makeText(v.getContext(),"이미 1개의 패키지를 구매하셨습니다.",Toast.LENGTH_SHORT).show();
+        else {
+            Toast.makeText(v.getContext(),"구입하셨습니다.",Toast.LENGTH_SHORT).show();
+            DbOpenHelper.addProducts(1,5);
+            BottomNavigationView bottomNavigationView = (BottomNavigationView) ((DDACMainActivity) v.getContext()).findViewById(R.id.navigation);
+            bottomNavigationView.setSelectedItemId(R.id.action_item3);
+        }
     };
     View.OnClickListener productClickListener = (v) -> {
         Intent intent = new Intent(context, ProductInformationActivity.class);

@@ -26,6 +26,8 @@ import com.example.taehyung.ddac.Adapter.ExpandableListAdapter;
 import com.example.taehyung.ddac.Adapter.LoopPagerAdapter;
 import com.example.taehyung.ddac.Adapter.RecyclerViewAdapter;
 import com.example.taehyung.ddac.DDACMainActivity;
+import com.example.taehyung.ddac.DataBase.DbOpenHelper;
+import com.example.taehyung.ddac.Item.BoughtProduct;
 import com.example.taehyung.ddac.Item.ProductItem;
 import com.example.taehyung.ddac.MainActivity;
 import com.example.taehyung.ddac.R;
@@ -42,7 +44,7 @@ public class DdacFragment extends Fragment {
     private ExpandableListView expandableListView;
     private ExpandableListAdapter expandableListAdapter;
     private List<String> expandableListTitle;
-    private HashMap<String, List<String>> expandableListDetail;
+    private HashMap<String, Integer> expandableListDetail;
     public static DdacFragment newInstance() {
         DdacFragment fragment = new DdacFragment();
         return fragment;
@@ -59,7 +61,7 @@ public class DdacFragment extends Fragment {
         remainTime = v.findViewById(R.id.remainTime);
         updateTimeEverySecond();
         expandableListView = (ExpandableListView) v.findViewById(R.id.expandableListView);
-        expandableListDetail = ExpandableListAdapter.getData();
+        expandableListDetail = ExpandableListAdapter.getData(getContext());
         expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
         expandableListAdapter = new ExpandableListAdapter(v.getContext(), expandableListTitle, expandableListDetail);
         expandableListView.setAdapter(expandableListAdapter);
@@ -83,7 +85,7 @@ public class DdacFragment extends Fragment {
         expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-                Toast.makeText(v.getContext(), expandableListDetail.get(expandableListTitle.get(groupPosition)).get(childPosition), Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(), expandableListDetail.get(expandableListTitle.get(groupPosition)), Toast.LENGTH_SHORT).show();
                 return false;
             }
         });

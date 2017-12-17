@@ -21,7 +21,7 @@ public class DataBases {
                 "create table "+_TABLENAME+"("
                         +_ID+" integer primary key autoincrement, "
                         +CONTENTS_ID+" integer, "
-                        +BUY_TIME+" timestamp default CURRENT_TIMESTAMP, "
+                        +BUY_TIME+" timestamp DEFAULT (datetime('now','localtime')), "
                         +CURRENT_LEVEL+" integer);";
     }
 }

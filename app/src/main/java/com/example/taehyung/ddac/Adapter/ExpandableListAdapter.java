@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.taehyung.ddac.R;
@@ -89,10 +90,16 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
                     getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.parent_item, null);
         }
-        TextView listTitleTextView = (TextView) convertView
-                .findViewById(R.id.listTitle);
+        TextView listTitleTextView = (TextView) convertView.findViewById(R.id.listTitle);
+        ImageView typeImageView = (ImageView)convertView.findViewById(R.id.listType);
         listTitleTextView.setTypeface(null, Typeface.BOLD);
         listTitleTextView.setText(listTitle);
+        ImageView upDownImageView = (ImageView)convertView.findViewById(R.id.expandableImage);
+        typeImageView.setImageResource(R.drawable.quest_main_icon);
+        if(isExpanded)
+            upDownImageView.setImageResource(R.drawable.down_image);
+        else
+            upDownImageView.setImageResource(R.drawable.up_image);
         return convertView;
     }
 
@@ -110,35 +117,11 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     public static HashMap<String, List<String>> getData() {
         HashMap<String, List<String>> ParentItem = new HashMap<String, List<String>>();
 
-        List<String> Colors = new ArrayList<String>();
-        Colors.add("test");
-        Colors.add("test");
-        Colors.add("test");
-
-        List<String> Animals = new ArrayList<String>();
-        Animals.add("test");
-        Animals.add("test");
-        Animals.add("test");
-
-        List<String> Sports = new ArrayList<String>();
-        Sports.add("test");
-        Sports.add("test");
-        Sports.add("test");
-
-        List<String> tree = new ArrayList<String>();
-        tree.add("test");
-        tree.add("test");
-        tree.add("test");
-
-        ParentItem.put("누명", Animals);
-        ParentItem.put("추격자", Colors);
-        ParentItem.put("도둑들", Sports);
-        ParentItem.put("통곡의 미루나무", tree);
+        List<String> openingText = new ArrayList<String>();
+        openingText.add("오프닝 영상을 감상하세요.");
+        ParentItem.put("오프닝 영상을 감상하세요.", openingText);
 
         return ParentItem;
-
-
-
     }
 }
 

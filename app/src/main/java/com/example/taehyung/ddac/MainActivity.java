@@ -3,26 +3,32 @@ package com.example.taehyung.ddac;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Locale;
+import android.os.Handler;
+import java.util.logging.LogRecord;
+
 public class MainActivity extends AppCompatActivity {
     Button btnLogin, btnFindIdAndPwd, btnRegister;
+    private String TAG ="KTH";
     EditText etId;
+    public static Handler mHandler = new Handler();
     EditText etPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         resourceInit();
         registerListener();
-
-        /*
+        // Log.d(TAG, Locale.getDefault().getLanguage());
         this.finish();
-        Intent intent = new Intent(this, BuyActivity.class);
-        startActivity(intent);*/
+        Intent intent = new Intent(this, DDACMainActivity.class);
+        startActivity(intent);
     }
 
     View.OnClickListener loginClickListener = (v) -> {

@@ -15,7 +15,6 @@ import android.widget.Toast;
 public class ProductInformationActivity extends AppCompatActivity {
     Button btnBack;
     Button btnVideoMoreDetails;
-    Button btnActorMoreDetilas;
     Button btnBuy;
     ImageView prepareImage1;
     ImageView prepareImage2;
@@ -27,7 +26,6 @@ public class ProductInformationActivity extends AppCompatActivity {
         resourceInit();
         btnBack.setOnClickListener(backClickListener);
         btnVideoMoreDetails.setOnClickListener(moreVideoClickListener);
-        btnActorMoreDetilas.setOnClickListener(moreActorClickListener);
         btnBuy.setOnClickListener(buyClickListener);
         prepareImage1.setOnClickListener(prepareImageClickListener);
         prepareImage2.setOnClickListener(prepareImageClickListener);
@@ -35,7 +33,6 @@ public class ProductInformationActivity extends AppCompatActivity {
     }
     View.OnClickListener backClickListener = (v) -> this.finish();
     View.OnClickListener moreVideoClickListener = (v) -> Toast.makeText(this,"등록되어 있는 동영상이 없습니다.",Toast.LENGTH_SHORT).show();
-    View.OnClickListener moreActorClickListener = (v) -> Toast.makeText(this,"등록되어 있는 배우가 없습니다.",Toast.LENGTH_SHORT).show();
     View.OnClickListener prepareImageClickListener = (v) -> Toast.makeText(this,"동영상을 불러올 수 없습니다.",Toast.LENGTH_SHORT).show();
     View.OnClickListener buyClickListener = (v) -> {
         Intent intent = new Intent(this, BuyActivity.class);
@@ -44,7 +41,6 @@ public class ProductInformationActivity extends AppCompatActivity {
     public void resourceInit(){
         btnBack = (Button)findViewById(R.id.backButton);
         btnVideoMoreDetails = (Button)findViewById(R.id.moreDetailsOfVideo);
-        btnActorMoreDetilas = (Button)findViewById(R.id.moreDetailsOfActor);
         btnBuy = (Button)findViewById(R.id.btnBuy);
         prepareImage1 = (ImageView)findViewById(R.id.video_prepare_1);
         prepareImage2 = (ImageView)findViewById(R.id.video_prepare_2);

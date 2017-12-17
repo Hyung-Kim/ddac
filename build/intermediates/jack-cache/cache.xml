@@ -62,6 +62,12 @@
         <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-2d171f524cdf9263f2e0697fa4660efaed388971.jar" />
     </item>
     <item
+        jar="C:\Users\TaeHyungKim\.android\build-cache\4b8de9ef6a1b68b222f88e496d0d4c654f1b3355\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-e136bea6d80be5e3ddfe91aff820eae493753ffd.jar" />
+    </item>
+    <item
         jar="C:\Users\TaeHyungKim\.android\build-cache\8c0cf23db6b3b19a817ca5fdc3ff2062008483a4\output\jars\classes.jar"
         revision="26.0.1"
         sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
@@ -72,6 +78,12 @@
         revision="26.0.1"
         sha1="e176fd06c2ad5b50a2f5cb4de6000a83a7cb48f5">
         <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-cecd30433833430d059a175741d32fc4b9512a44.jar" />
+    </item>
+    <item
+        jar="C:\Users\TaeHyungKim\.android\build-cache\d06cad47738cbc9865b3d3546fa4c5673f737d0b\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="C:\Users\TaeHyungKim\Desktop\ddac\ddac\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-fc467cdb484fe7032b754548957b3a825d19e806.jar" />
     </item>
     <item
         jar="C:\Users\TaeHyungKim\.android\build-cache\827eac7634c34ebb0ee786dff5bc3488bf45f616\output\jars\classes.jar"

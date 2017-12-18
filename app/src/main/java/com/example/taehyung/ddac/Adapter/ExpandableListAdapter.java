@@ -1,6 +1,7 @@
 package com.example.taehyung.ddac.Adapter;
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.taehyung.ddac.DataBase.DbOpenHelper;
+import com.example.taehyung.ddac.Item.BoughtProduct;
 import com.example.taehyung.ddac.Item.ParentItem;
 import com.example.taehyung.ddac.Item.TypeItem;
 import com.example.taehyung.ddac.R;
@@ -23,10 +26,15 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     public static Context context;
     private List<ParentItem> contents;
+    public com.example.taehyung.ddac.DataBase.DbOpenHelper DbOpenHelper;
+    public List<BoughtProduct> boughtProducts;
 
     public ExpandableListAdapter(Context context, List<com.example.taehyung.ddac.Item.ParentItem> contents) {
         this.context = context;
         this.contents = contents;
+        DbOpenHelper = new DbOpenHelper(context);
+        DbOpenHelper.open(context);
+        boughtProducts = DbOpenHelper.getBoughtProductList();
     }
 
     @Override
@@ -85,9 +93,13 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         TextView listTitleTextView = (TextView) convertView.findViewById(R.id.listTitle);
         ImageView typeImageView = (ImageView)convertView.findViewById(R.id.listType);
         listTitleTextView.setTypeface(null, Typeface.BOLD);
+        if(boughtProducts.size() != 0 && (listPosition+1 < boughtProducts.get(0).getLevel())) {
+            listTitleTextView.setPaintFlags((listTitleTextView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG));
+            listTitleTextView.setTextColor(0xffa0a0a0);
+        }else
+            listTitleTextView.setTextColor(0xffff0000);
         listTitleTextView.setText(listTitle);
         ImageView upDownImageView = (ImageView)convertView.findViewById(R.id.expandableImage);
-        ImageView typeImg = (ImageView)convertView.findViewById(R.id.listType);
         if(type == TypeItem.MAIN_CONTENTS)
             typeImageView.setImageResource(R.drawable.quest_main_icon);
         else

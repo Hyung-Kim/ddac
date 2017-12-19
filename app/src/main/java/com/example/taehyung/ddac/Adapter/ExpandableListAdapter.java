@@ -96,8 +96,11 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         if(boughtProducts.size() != 0 && (listPosition+1 < boughtProducts.get(0).getLevel())) {
             listTitleTextView.setPaintFlags((listTitleTextView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG));
             listTitleTextView.setTextColor(0xffa0a0a0);
-        }else
+        }else {
             listTitleTextView.setTextColor(0xffff0000);
+            if((listTitleTextView.getPaintFlags() & Paint.STRIKE_THRU_TEXT_FLAG) == Paint.STRIKE_THRU_TEXT_FLAG)
+                listTitleTextView.setPaintFlags((listTitleTextView.getPaintFlags() ^ Paint.STRIKE_THRU_TEXT_FLAG));
+        }
         listTitleTextView.setText(listTitle);
         ImageView upDownImageView = (ImageView)convertView.findViewById(R.id.expandableImage);
         if(type == TypeItem.MAIN_CONTENTS)

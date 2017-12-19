@@ -26,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
         resourceInit();
         registerListener();
         // Log.d(TAG, Locale.getDefault().getLanguage());
-        this.finish();
-        Intent intent = new Intent(this, DDACMainActivity.class);
-        startActivity(intent);
+//        this.finish();
+//        Intent intent = new Intent(this, DDACMainActivity.class);
+//        startActivity(intent);
     }
 
     View.OnClickListener loginClickListener = (v) -> {

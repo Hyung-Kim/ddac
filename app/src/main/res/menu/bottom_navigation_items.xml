@@ -20,4 +20,4 @@
         android:id="@+id/action_item5"
         android:icon="@drawable/bottom_navigation_icon_user"
         android:title="계정"/>
-    </menu>
+</menu>

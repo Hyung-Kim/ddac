@@ -29,7 +29,7 @@
             android:textStyle="bold"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="누명"
+            android:text="잃어버린 것을 찾아서"
             android:textColor="#000000"
             android:textSize="34sp" />
     </RelativeLayout>
@@ -71,7 +71,7 @@
                             android:layout_height="wrap_content"
                             android:textColor="#000000"
                             android:textSize="26sp"
-                            android:text="누명"
+                            android:text="잃어버린 것을 찾아서"
                             android:layout_marginBottom="5dp"
                             android:layout_width="wrap_content" />
                         <ImageView
@@ -86,7 +86,7 @@
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:layout_marginBottom="5dp"
-                            android:text="스릴러, 서스펜스, 반전"
+                            android:text="역사, 추리, 스릴러"
                             android:layout_width="wrap_content" />
                         <TextView
                             android:id="@+id/tvTime"
@@ -94,7 +94,7 @@
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:layout_marginBottom="5dp"
-                            android:text="약 8시간 소요"
+                            android:text="약 4시간 소요"
                             android:layout_width="wrap_content" />
                         <TextView
                             android:id="@+id/tvDistance"
@@ -102,14 +102,14 @@
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:layout_marginBottom="5dp"
-                            android:text="총 이동거리 12.8km"
+                            android:text="총 이동거리 8km"
                             android:layout_width="wrap_content" />
                         <TextView
                             android:id="@+id/tvAccmulate"
                             android:layout_height="wrap_content"
                             android:textColor="#000000"
                             android:textSize="20sp"
-                            android:text="누적 4,812명"
+                            android:text="누적 100,812명"
                             android:layout_marginBottom="5dp"
                             android:layout_width="wrap_content" />
                         <Button
@@ -136,7 +136,7 @@
                 android:layout_width="match_parent"
                 android:layout_marginTop="10dp"
                 android:id="@+id/tvProductInformationContents"
-                android:text="대기업 회장 딸의 살해 누명을 쓰고 25년형을 선고받은 운전기사 박석민. 가족도 돈도 없는 그는 어쩔 수 없이 억울하게 감옥생활을 하다 15년 후 갑자기 무죄를 입증할 자료가 있다며 변호사를 선임하게 되는데.."
+                android:text="어느날 국정원 직원이 김교수에게 찾아와 막혀있는 아시아 정세를 풀기 위해 보물을 찾아야 한다며 지령을 전달한다.  삼국의 외교단과 약속한 시간까지 앞으로 단 4시간, 삼국의 마음을 잃지 않으려면 반드시 4시간 안에 보물을 찾아야만 하는데.."
                 android:textSize="22sp"
                 android:textColor="#000000"
                 android:layout_height="wrap_content" />
@@ -331,7 +331,7 @@
                         android:layout_marginTop="10dp"
                         android:textColor="#000000"
                         android:textSize="18sp"
-                        android:text="누명 메인 예고편"
+                        android:text="메인 예고편"
                         android:layout_height="wrap_content"/>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -349,72 +349,6 @@
                             android:textColor="#aa000000"
                             android:textSize="18sp"
                             android:text="1,453"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_height="wrap_content">
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="200dp">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:src="@drawable/video_prepare_2"
-                        android:id="@+id/video_prepare_2"
-
-                        android:layout_height="match_parent" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:text="2:58"
-                        android:textSize="24sp"
-                        android:textColor="#ffffff"
-                        android:layout_marginRight="25dp"
-                        android:layout_marginBottom="8dp"
-                        android:background="#000000"
-                        android:layout_alignRight="@+id/video_prepare_2"
-                        android:layout_alignBottom="@+id/video_prepare_2"
-                        android:layout_height="wrap_content" />
-                </RelativeLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_height="match_parent">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:text="티저 영상"
-                        android:layout_height="wrap_content"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_marginTop="10dp"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:text="누명 티저 영상"
-                        android:layout_height="wrap_content"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal"
-                        android:layout_height="match_parent">
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:src="@drawable/right_direction"
-                            android:layout_height="wrap_content" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_marginLeft="12dp"
-                            android:textColor="#aa000000"
-                            android:textSize="18sp"
-                            android:text="1,234"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
                 </LinearLayout>

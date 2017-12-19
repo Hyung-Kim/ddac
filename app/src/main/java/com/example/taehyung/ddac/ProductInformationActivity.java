@@ -23,7 +23,6 @@ public class ProductInformationActivity extends AppCompatActivity {
     Button btnVideoMoreDetails;
     Button btnBuy;
     ImageView prepareImage1;
-    ImageView prepareImage2;
     ImageView prepareImage3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +33,6 @@ public class ProductInformationActivity extends AppCompatActivity {
         btnVideoMoreDetails.setOnClickListener(moreVideoClickListener);
         btnBuy.setOnClickListener(buyClickListener);
         prepareImage1.setOnClickListener(prepareImageClickListener);
-        prepareImage2.setOnClickListener(prepareImageClickListener);
         prepareImage3.setOnClickListener(prepareImageClickListener);
     }
     View.OnClickListener backClickListener = (v) -> this.finish();
@@ -49,7 +47,7 @@ public class ProductInformationActivity extends AppCompatActivity {
         else {
             BottomNavigationView bottomNavigationView = (BottomNavigationView) ((DDACMainActivity) v.getContext()).findViewById(R.id.navigation);
             bottomNavigationView.setSelectedItemId(R.id.action_item3);
-            DbOpenHelper.addProducts(1,5);
+            DbOpenHelper.addProducts(1,1);
         }
     };
     public void resourceInit(){
@@ -57,7 +55,6 @@ public class ProductInformationActivity extends AppCompatActivity {
         btnVideoMoreDetails = (Button)findViewById(R.id.moreDetailsOfVideo);
         btnBuy = (Button)findViewById(R.id.btnBuy);
         prepareImage1 = (ImageView)findViewById(R.id.video_prepare_1);
-        prepareImage2 = (ImageView)findViewById(R.id.video_prepare_2);
         prepareImage3 = (ImageView)findViewById(R.id.video_prepare_3);
     }
 }

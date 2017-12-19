@@ -46,8 +46,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.btnBuy.setOnClickListener(buyClickListener);
-        holder.imageView.setOnClickListener(productClickListener);
+        if(position == 0) {
+            holder.btnBuy.setOnClickListener(buyClickListener);
+            holder.imageView.setOnClickListener(productClickListener);
+        }
+        else {
+            holder.btnBuy.setOnClickListener(emptyClickListener);
+            holder.imageView.setOnClickListener(emptyProductClickListener);
+        }
         holder.imageView.setImageResource(products.get(position).img);
         holder.tvTitle.setText(products.get(position).title);
         holder.tvType.setText(products.get(position).type);
@@ -65,14 +71,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             Toast.makeText(v.getContext(),"이미 1개의 패키지를 구매하셨습니다.",Toast.LENGTH_SHORT).show();
         else {
             Toast.makeText(v.getContext(),"구입하셨습니다.",Toast.LENGTH_SHORT).show();
-            DbOpenHelper.addProducts(1,5);
+            DbOpenHelper.addProducts(1,1);
             BottomNavigationView bottomNavigationView = (BottomNavigationView) ((DDACMainActivity) v.getContext()).findViewById(R.id.navigation);
             bottomNavigationView.setSelectedItemId(R.id.action_item3);
         }
     };
+    View.OnClickListener emptyClickListener = (View v) -> {
+        Toast.makeText(v.getContext(),"미구현.",Toast.LENGTH_SHORT).show();
+    };
     View.OnClickListener productClickListener = (v) -> {
         Intent intent = new Intent(context, ProductInformationActivity.class);
         context.startActivity(intent);
+    };
+    View.OnClickListener emptyProductClickListener = (v) -> {
+        Toast.makeText(v.getContext(),"미구현.",Toast.LENGTH_SHORT).show();
     };
     @Override
     public int getItemCount() {

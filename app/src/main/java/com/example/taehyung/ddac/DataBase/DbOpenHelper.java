@@ -64,6 +64,12 @@ public class DbOpenHelper {
             products.add(new BoughtProduct(cursor.getInt(0), cursor.getInt(1), cursor.getString(2), cursor.getInt(3)));
         return products;
     }
+    public void levelUp(int level) {
+        StringBuffer sb = new StringBuffer();
+        sb.append(" UPDATE ddac set current_level = "+level+" where contents_id = 1");
+        SQLiteDatabase db = mDBHelper.getWritableDatabase();
+        db.execSQL(sb.toString());
+    }
     public void addProducts(int id, int level) {
         SQLiteDatabase db = mDBHelper.getWritableDatabase();
         StringBuffer sb = new StringBuffer();

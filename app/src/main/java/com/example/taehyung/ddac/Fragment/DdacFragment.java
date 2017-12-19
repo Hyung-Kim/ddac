@@ -6,20 +6,26 @@ package com.example.taehyung.ddac.Fragment;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.taehyung.ddac.Adapter.ExpandableListAdapter;
+import com.example.taehyung.ddac.DDACMainActivity;
 import com.example.taehyung.ddac.DataBase.DbOpenHelper;
+import com.example.taehyung.ddac.GoogleMapActivity;
 import com.example.taehyung.ddac.Item.BoughtProduct;
 import com.example.taehyung.ddac.Item.ParentItem;
 import com.example.taehyung.ddac.Item.TypeItem;
@@ -31,7 +37,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.zip.DataFormatException;
 
 public class DdacFragment extends Fragment {
     private TextView remainTime;
@@ -42,6 +47,7 @@ public class DdacFragment extends Fragment {
     private ExpandableListAdapter expandableListAdapter;
     private List<ParentItem> expandableList;
     private String startTime = null;
+
     public static DdacFragment newInstance() {
         DdacFragment fragment = new DdacFragment();
         return fragment;
@@ -55,9 +61,12 @@ public class DdacFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_ddac, container, false);
+        mapButtonInit();
         remainTime = v.findViewById(R.id.remainTime);
         expandableListView = (ExpandableListView) v.findViewById(R.id.expandableListView);
         expandableList = getData(getContext());
+        if(expandableList==null)
+            return v;
         expandableListAdapter = new ExpandableListAdapter(v.getContext(), expandableList);
         expandableListView.setAdapter(expandableListAdapter);
         Display newDisplay = getActivity().getWindowManager().getDefaultDisplay();
@@ -69,11 +78,17 @@ public class DdacFragment extends Fragment {
         }
         else
             startTime =null;
-        updateTimeEverySecond();
+        if(startTime != null)
+            updateTimeEverySecond();
         expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
             @Override
             public void onGroupExpand(int groupPosition) {
-                //확장
+                if(groupPosition == 0 && boughtProducts.get(0).getLevel() == 1){
+                    DbOpenHelper.levelUp(2);
+                    Toast.makeText(getActivity(),"오프닝 영상 보기를 완료하였습니다. ",Toast.LENGTH_LONG).show();
+                    BottomNavigationView bottomNavigationView = (BottomNavigationView) ((DDACMainActivity) v.getContext()).findViewById(R.id.navigation);
+                    bottomNavigationView.setSelectedItemId(R.id.action_item3);
+                }
             }
         });
         expandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
@@ -85,13 +100,20 @@ public class DdacFragment extends Fragment {
         expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-                //클릭
-
                 return false;
             }
         });
         return v;
     }
+    void mapButtonInit(){
+        Button btnGps = v.findViewById(R.id.btnGps);
+        btnGps.setOnClickListener(mapBtnClickListener);
+    }
+
+    View.OnClickListener mapBtnClickListener = ((v)->{
+        Intent intent = new Intent(v.getContext(), GoogleMapActivity.class);
+        startActivity(intent);
+    });
     public List<ParentItem> getData(Context ctx) {
         List<ParentItem> parentItem = new ArrayList<>();
         Integer child1 = new Integer(R.drawable.first_question);
@@ -114,24 +136,20 @@ public class DdacFragment extends Fragment {
             }
             if (boughtProduct.getLevel() >= 3) {
                 parentItem.add(new ParentItem("추천식당에서 식사를 하세요(10% 할인)", nothing,TypeItem.SERVICE_CONTENTS));
-            }
-            if (boughtProduct.getLevel() >= 4) {
                 parentItem.add(new ParentItem("퀘스트 '성서로운 돌'이(가) 생성되었습니다.", child2, TypeItem.MAIN_CONTENTS));
             }
-            if (boughtProduct.getLevel() >= 5) {
+            if (boughtProduct.getLevel() >= 4) {
                 parentItem.add(new ParentItem("퀘스트 '조력자 컨택'이 생성되었습니다.", child3, TypeItem.MAIN_CONTENTS));
             }
-            if (boughtProduct.getLevel() >= 6) {
+            if (boughtProduct.getLevel() >= 5) {
                 parentItem.add(new ParentItem("퀘스트 '어둠 속 빛 한줄기'이(가) 생성되었습니다.", child4, TypeItem.MAIN_CONTENTS));
             }
-            if (boughtProduct.getLevel() >= 7) {
+            if (boughtProduct.getLevel() >= 6) {
                 parentItem.add(new ParentItem("퀘스트 '나라의 운명'이(가) 생성되었습니다.", child5, TypeItem.MAIN_CONTENTS));
             }
             return parentItem;
         }else
-            parentItem.add(new ParentItem("제작중", nothing,TypeItem.MAIN_CONTENTS));
-
-        return parentItem;
+            return null;
     }
 
     Thread t = new Thread() {
@@ -151,34 +169,34 @@ public class DdacFragment extends Fragment {
     }
     private void updateTextView() {
         Date noteTS = Calendar.getInstance().getTime();
-        String time = "hh:mm:ss";
+        String time = "HH:mm:ss";
         String endTime = DateFormat.format(time, noteTS).toString();
         if(startTime!=null){
             try {
                 Log.d("KTH","start : " +startTime);
                 Log.d("KTH","end : " +endTime);
-                Date date1 = new SimpleDateFormat("hh:mm:ss").parse(startTime);
-                Date date2 = new SimpleDateFormat("hh:mm:ss").parse(endTime);
+                Date date1 = new SimpleDateFormat("HH:mm:ss").parse(startTime);
+                Date date2 = new SimpleDateFormat("HH:mm:ss").parse(endTime);
                 long timeDifInMillis = date2.getTime() - date1.getTime();
                 long diffSeconds = timeDifInMillis / 1000 % 60;
                 long diffMinutes = timeDifInMillis / (60 * 1000) % 60;
                 long diffHours = timeDifInMillis / (60 * 60 * 1000) % 24;
                 endTime = String.format("%02d:%02d:%02d",diffHours,diffMinutes,diffSeconds);
-
-                //10시간 기준
-                String limitTIme = "10:00:00";
-                Date date3 = new SimpleDateFormat("hh:mm:ss").parse(limitTIme);
-                Date date4 = new SimpleDateFormat("hh:mm:ss").parse(endTime);
-                timeDifInMillis = date3.getTime() - date4.getTime();
-                if(timeDifInMillis <= 0) {
+                if(diffHours >= 4){
                     remainTime.setText("제한시간 종료");
                     t.interrupt();
+                    return;
                 }
+
+                //10시간 기준
+                String limitTIme = "4:00:00";
+                Date date3 = new SimpleDateFormat("HH:mm:ss").parse(limitTIme);
+                Date date4 = new SimpleDateFormat("HH:mm:ss").parse(endTime);
+                timeDifInMillis = date3.getTime() - date4.getTime();
                 diffSeconds = timeDifInMillis / 1000 % 60;
                 diffMinutes = timeDifInMillis / (60 * 1000) % 60;
                 diffHours = timeDifInMillis / (60 * 60 * 1000) % 24;
                 endTime = String.format("%02d:%02d:%02d",diffHours,diffMinutes,diffSeconds);
-
                 remainTime.setText(endTime);
             }catch(Exception e){}
         }else

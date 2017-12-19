@@ -2,34 +2,21 @@ package com.example.taehyung.ddac;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
 
-import com.example.taehyung.ddac.Adapter.LoopPagerAdapter;
-import com.example.taehyung.ddac.Adapter.RecyclerViewAdapter;
 import com.example.taehyung.ddac.Fragment.DdacFragment;
 import com.example.taehyung.ddac.Fragment.DictionaryFragment;
 import com.example.taehyung.ddac.Fragment.HomeFragment;
 import com.example.taehyung.ddac.Fragment.PopularFragment;
 import com.example.taehyung.ddac.Fragment.UserFragment;
-import com.example.taehyung.ddac.Item.ProductItem;
-import com.example.taehyung.ddac.RollView.RollPagerView;
-
-import java.util.ArrayList;
 
 /**
  * Created by TaeHyungKim on 2017-12-10.
  */
 
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 public class DDACMainActivity extends AppCompatActivity {

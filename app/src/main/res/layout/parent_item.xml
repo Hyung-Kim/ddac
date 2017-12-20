@@ -16,7 +16,7 @@
             android:gravity="center_vertical"
             android:layout_height="match_parent"
             android:textColor="#000000"
-            android:textSize="25sp" />
+            android:textSize="@dimen/expandable_parent_item_font_size" />
         <ImageView
             android:id="@+id/expandableImage"
             android:layout_width="0dp"

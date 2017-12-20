@@ -31,7 +31,7 @@
             android:gravity="center"
             android:text="잃어버린 것을 찾아서"
             android:textColor="#000000"
-            android:textSize="34sp" />
+            android:textSize="@dimen/information_title_font_size" />
     </RelativeLayout>
     <ScrollView
         android:layout_width="match_parent"
@@ -70,7 +70,7 @@
                             android:id="@+id/tvTitle"
                             android:layout_height="wrap_content"
                             android:textColor="#000000"
-                            android:textSize="26sp"
+                            android:textSize="@dimen/information_middle_title_font_size"
                             android:text="잃어버린 것을 찾아서"
                             android:layout_marginBottom="5dp"
                             android:layout_width="wrap_content" />
@@ -84,7 +84,7 @@
                             android:id="@+id/tvType"
                             android:layout_height="wrap_content"
                             android:textColor="#000000"
-                            android:textSize="20sp"
+                            android:textSize="@dimen/information_normal_font_size"
                             android:layout_marginBottom="5dp"
                             android:text="역사, 추리, 스릴러"
                             android:layout_width="wrap_content" />
@@ -92,7 +92,7 @@
                             android:id="@+id/tvTime"
                             android:layout_height="wrap_content"
                             android:textColor="#000000"
-                            android:textSize="20sp"
+                            android:textSize="@dimen/information_normal_font_size"
                             android:layout_marginBottom="5dp"
                             android:text="약 4시간 소요"
                             android:layout_width="wrap_content" />
@@ -100,7 +100,7 @@
                             android:id="@+id/tvDistance"
                             android:layout_height="wrap_content"
                             android:textColor="#000000"
-                            android:textSize="20sp"
+                            android:textSize="@dimen/information_normal_font_size"
                             android:layout_marginBottom="5dp"
                             android:text="총 이동거리 8km"
                             android:layout_width="wrap_content" />
@@ -108,7 +108,7 @@
                             android:id="@+id/tvAccmulate"
                             android:layout_height="wrap_content"
                             android:textColor="#000000"
-                            android:textSize="20sp"
+                            android:textSize="@dimen/information_normal_font_size"
                             android:text="누적 100,812명"
                             android:layout_marginBottom="5dp"
                             android:layout_width="wrap_content" />
@@ -117,7 +117,7 @@
                             android:layout_height="28dp"
                             android:textColor="#ffffff"
                             android:background="#ff0000"
-                            android:textSize="21sp"
+                            android:textSize="@dimen/information_normal_font_size"
                             android:layout_marginLeft="5dp"
                             android:text="구매하기"
                             android:layout_width="100dp" />
@@ -128,7 +128,7 @@
                 android:layout_width="match_parent"
                 android:layout_marginTop="30dp"
                 android:text="줄거리"
-                android:textSize="24sp"
+                android:textSize="@dimen/information_middle_title_font_size"
                 android:textColor="#000000"
                 android:textStyle="bold"
                 android:layout_height="wrap_content" />
@@ -137,14 +137,14 @@
                 android:layout_marginTop="10dp"
                 android:id="@+id/tvProductInformationContents"
                 android:text="어느날 국정원 직원이 김교수에게 찾아와 막혀있는 아시아 정세를 풀기 위해 보물을 찾아야 한다며 지령을 전달한다.  삼국의 외교단과 약속한 시간까지 앞으로 단 4시간, 삼국의 마음을 잃지 않으려면 반드시 4시간 안에 보물을 찾아야만 하는데.."
-                android:textSize="22sp"
+                android:textSize="@dimen/information_normal_font_size"
                 android:textColor="#000000"
                 android:layout_height="wrap_content" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_marginTop="30dp"
                 android:text="세부정보"
-                android:textSize="24sp"
+                android:textSize="@dimen/information_middle_title_font_size"
                 android:textColor="#000000"
                 android:textStyle="bold"
                 android:layout_height="wrap_content" />
@@ -156,7 +156,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:text="가격"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/information_normal_font_size"
                     android:textColor="#000000"
                     android:gravity="left"
                     android:layout_weight="1"
@@ -164,7 +164,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:text="무료"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/information_normal_font_size"
                     android:textColor="#ff0000"
                     android:gravity="right"
                     android:layout_weight="1"
@@ -178,7 +178,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:text="지역"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/information_normal_font_size"
                     android:textColor="#000000"
                     android:gravity="left"
                     android:layout_weight="1"
@@ -186,7 +186,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:text="대한민국 서울"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/information_normal_font_size"
                     android:textColor="#ff0000"
                     android:gravity="right"
                     android:layout_weight="1"
@@ -200,7 +200,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:text="장르"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/information_normal_font_size"
                     android:textColor="#000000"
                     android:gravity="left"
                     android:layout_weight="1"
@@ -208,7 +208,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:text="#역사 #추리 #스릴러"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/information_normal_font_size"
                     android:textColor="#ff0000"
                     android:gravity="right"
                     android:layout_weight="1"
@@ -222,7 +222,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:text="소요시간"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/information_normal_font_size"
                     android:textColor="#000000"
                     android:gravity="left"
                     android:layout_weight="1"
@@ -230,7 +230,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:text="약 4시간"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/information_normal_font_size"
                     android:textColor="#ff0000"
                     android:gravity="right"
                     android:layout_weight="1"
@@ -244,7 +244,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:text="추천 플레이시간"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/information_normal_font_size"
                     android:textColor="#000000"
                     android:gravity="left"
                     android:layout_weight="1"
@@ -252,7 +252,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:text="오후 3시 ~ 오후 7시"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/information_normal_font_size"
                     android:textColor="#ff0000"
                     android:gravity="right"
                     android:layout_weight="1"
@@ -266,7 +266,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:text="총 이동거리"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/information_normal_font_size"
                     android:textColor="#000000"
                     android:gravity="left"
                     android:layout_weight="1"
@@ -274,7 +274,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:text="약 8km"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/information_normal_font_size"
                     android:textColor="#ff0000"
                     android:gravity="right"
                     android:layout_weight="1"
@@ -284,7 +284,7 @@
                 android:layout_width="match_parent"
                 android:layout_marginTop="30dp"
                 android:text="동영상"
-                android:textSize="24sp"
+                android:textSize="@dimen/information_middle_title_font_size"
                 android:textColor="#000000"
                 android:textStyle="bold"
                 android:layout_height="wrap_content" />
@@ -298,15 +298,16 @@
                     android:layout_height="200dp">
                     <ImageView
                         android:layout_width="match_parent"
+                        android:scaleType="fitXY"
                         android:src="@drawable/video_prepare_1"
                         android:id="@+id/video_prepare_1"
                         android:layout_height="match_parent" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:text="1:58"
-                        android:textSize="24sp"
+                        android:textSize="@dimen/information_middle_title_font_size"
                         android:textColor="#ffffff"
-                        android:layout_marginRight="25dp"
+                        android:layout_marginRight="20dp"
                         android:layout_marginBottom="8dp"
                         android:background="#000000"
                         android:layout_alignRight="@+id/video_prepare_1"
@@ -323,14 +324,14 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:textColor="#000000"
-                        android:textSize="18sp"
+                        android:textSize="@dimen/information_normal_font_size"
                         android:text="예고편"
                         android:layout_height="wrap_content"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_marginTop="10dp"
                         android:textColor="#000000"
-                        android:textSize="18sp"
+                        android:textSize="@dimen/information_normal_font_size"
                         android:text="메인 예고편"
                         android:layout_height="wrap_content"/>
                     <LinearLayout
@@ -347,7 +348,7 @@
                             android:layout_width="wrap_content"
                             android:layout_marginLeft="12dp"
                             android:textColor="#aa000000"
-                            android:textSize="18sp"
+                            android:textSize="@dimen/information_normal_font_size"
                             android:text="1,453"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
@@ -365,14 +366,14 @@
                         android:layout_width="match_parent"
                         android:src="@drawable/video_prepare_3"
                         android:id="@+id/video_prepare_3"
-
+                        android:scaleType="fitXY"
                         android:layout_height="match_parent" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:text="3:58"
-                        android:textSize="24sp"
+                        android:textSize="@dimen/information_middle_title_font_size"
                         android:textColor="#ffffff"
-                        android:layout_marginRight="25dp"
+                        android:layout_marginRight="20dp"
                         android:layout_marginBottom="8dp"
                         android:background="#000000"
                         android:layout_alignRight="@+id/video_prepare_3"
@@ -389,14 +390,14 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:textColor="#000000"
-                        android:textSize="18sp"
+                        android:textSize="@dimen/information_normal_font_size"
                         android:text="메이킹 영상"
                         android:layout_height="wrap_content"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_marginTop="10dp"
                         android:textColor="#000000"
-                        android:textSize="18sp"
+                        android:textSize="@dimen/information_normal_font_size"
                         android:text="기사 박석민(장현성) 촬영분"
                         android:layout_height="wrap_content"/>
                     <LinearLayout
@@ -413,7 +414,7 @@
                             android:layout_width="wrap_content"
                             android:layout_marginLeft="12dp"
                             android:textColor="#aa000000"
-                            android:textSize="18sp"
+                            android:textSize="@dimen/information_normal_font_size"
                             android:text="1,234"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
@@ -424,7 +425,7 @@
                 android:id="@+id/moreDetailsOfVideo"
                 android:background="@null"
                 android:textColor="#000000"
-                android:textSize="24sp"
+                android:textSize="@dimen/information_middle_title_font_size"
                 android:text="더 보기>"
                 android:gravity="center"
                 android:layout_height="wrap_content" />
@@ -432,7 +433,7 @@
                 android:layout_width="match_parent"
                 android:layout_marginTop="30dp"
                 android:text="평점/한줄평"
-                android:textSize="24sp"
+                android:textSize="@dimen/information_middle_title_font_size"
                 android:textColor="#000000"
                 android:textStyle="bold"
                 android:layout_height="wrap_content" />
@@ -441,21 +442,21 @@
                 android:layout_width="wrap_content"
                 android:textColor="#ff0000"
                 android:text="★★★☆☆"
-                android:textSize="26sp"
+                android:textSize="@dimen/information_middle_title_font_size"
                 android:layout_height="wrap_content" />
             <TextView
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:textColor="#000000"
                 android:text="너무너무너무 재밋음."
-                android:textSize="24sp"
+                android:textSize="@dimen/information_middle_title_font_size"
                 android:layout_height="wrap_content" />
             <TextView
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:textColor="#aa000000"
                 android:text="guest | 2017-12-31"
-                android:textSize="24sp"
+                android:textSize="@dimen/information_middle_title_font_size"
                 android:layout_height="wrap_content" />
         </LinearLayout>
     </ScrollView>

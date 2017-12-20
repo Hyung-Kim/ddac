@@ -1,34 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:paddingTop="8dp"
-    android:paddingBottom="8dp"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    android:background="#ffffff">
-
-    <RelativeLayout
+    android:background="@drawable/login_background">
+    <TextView
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
-        android:layout_marginBottom="20dp"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/backButton"
-            android:background="@drawable/back_button"
-            android:layout_height="50dp"
-            android:layout_width="50dp" />
-        <TextView
-            android:id="@+id/tvInformationTitle"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textStyle="bold"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:text="구매하기"
-            android:textColor="#000000"
-            android:textSize="34sp" />
-    </RelativeLayout>
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:textSize="@dimen/register_title_font_size" />
 </LinearLayout>

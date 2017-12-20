@@ -34,7 +34,7 @@
                     android:id="@+id/tvTitle"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
-                    android:textSize="26sp"
+                    android:textSize="@dimen/recycler_title_font_size"
                     android:text="누명"
                     android:layout_marginBottom="5dp"
                     android:layout_width="wrap_content" />
@@ -48,7 +48,7 @@
                     android:id="@+id/tvType"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/recycler_normal_font_size"
                     android:layout_marginBottom="5dp"
                     android:text="스릴러, 서스펜스, 반전"
                     android:layout_width="wrap_content" />
@@ -56,7 +56,7 @@
                     android:id="@+id/tvTime"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/recycler_normal_font_size"
                     android:layout_marginBottom="5dp"
                     android:text="약 8시간 소요"
                     android:layout_width="wrap_content" />
@@ -64,7 +64,7 @@
                     android:id="@+id/tvDistance"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/recycler_normal_font_size"
                     android:layout_marginBottom="5dp"
                     android:text="총 이동거리 12.8km"
                     android:layout_width="wrap_content" />
@@ -72,7 +72,7 @@
                     android:id="@+id/tvAccmulate"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/recycler_normal_font_size"
                     android:text="누적 4,812명"
                     android:layout_marginBottom="5dp"
                     android:layout_width="wrap_content" />
@@ -81,7 +81,7 @@
                     android:layout_height="28dp"
                     android:textColor="#ffffff"
                     android:background="#ff0000"
-                    android:textSize="21sp"
+                    android:textSize="@dimen/recycler_normal_font_size"
                     android:layout_marginLeft="5dp"
                     android:text="구매하기"
                     android:layout_width="100dp" />

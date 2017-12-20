@@ -19,7 +19,7 @@
             android:textColor="@color/black"
             android:text="잃어버린 것을 찾아서"
             android:gravity="center"
-            android:textSize="25sp"/>
+            android:textSize="@dimen/fragment_ddac_title_font_size"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_alignParentRight="true"
@@ -35,7 +35,7 @@
         android:layout_height="5dp" />
     <TextView
         android:layout_width="match_parent"
-        android:textSize="50sp"
+        android:textSize="@dimen/fragment_ddac_time_font_size"
         android:layout_marginTop="15dp"
         android:text="00:00:00"
         android:textColor="#000000"

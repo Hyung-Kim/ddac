@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-
+        <activity android:name=".SimpleVideoActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".GoogleMapActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".ProductInformationActivity"

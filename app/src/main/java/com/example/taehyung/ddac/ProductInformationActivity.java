@@ -2,6 +2,7 @@ package com.example.taehyung.ddac;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -22,6 +23,7 @@ public class ProductInformationActivity extends AppCompatActivity {
     Button btnBack;
     Button btnVideoMoreDetails;
     Button btnBuy;
+    private Handler handler = new Handler();
     ImageView prepareImage1;
     ImageView prepareImage3;
     @Override
@@ -42,14 +44,19 @@ public class ProductInformationActivity extends AppCompatActivity {
         DbOpenHelper DbOpenHelper = new DbOpenHelper(v.getContext());
         DbOpenHelper.open(v.getContext());
         List<BoughtProduct> boughtProducts = DbOpenHelper.getBoughtProductList();
-        if(boughtProducts.size() == 1)
-            Toast.makeText(v.getContext(),"이미 1개의 패키지를 구매하셨습니다.",Toast.LENGTH_SHORT).show();
+        if (boughtProducts.size() == 1)
+            Toast.makeText(v.getContext(), "이미 1개의 패키지를 구매하셨습니다.", Toast.LENGTH_SHORT).show();
         else {
-            BottomNavigationView bottomNavigationView = (BottomNavigationView) ((DDACMainActivity) v.getContext()).findViewById(R.id.navigation);
-            bottomNavigationView.setSelectedItemId(R.id.action_item3);
-            DbOpenHelper.addProducts(1,1);
+            this.finish();
+            new Thread(() -> {
+                try{
+                Thread.sleep(600);}catch (Exception e){}
+                handler.post(()->{DDACMainActivity.bottomNavigationView.setSelectedItemId(R.id.action_item3);
+                    DbOpenHelper.addProducts(1, 1);});
+            }).start();
         }
     };
+
     public void resourceInit(){
         btnBack = (Button)findViewById(R.id.backButton);
         btnVideoMoreDetails = (Button)findViewById(R.id.moreDetailsOfVideo);

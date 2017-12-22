@@ -47,19 +47,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         if(position == 0) {
-            holder.btnBuy.setOnClickListener(buyClickListener);
             holder.imageView.setOnClickListener(productClickListener);
         }
         else {
-            holder.btnBuy.setOnClickListener(emptyClickListener);
             holder.imageView.setOnClickListener(emptyProductClickListener);
         }
         holder.imageView.setImageResource(products.get(position).img);
         holder.tvTitle.setText(products.get(position).title);
-        holder.tvType.setText(products.get(position).type);
-        holder.tvTime.setText(products.get(position).time);
-        holder.tvDistance.setText(products.get(position).distance);
-        holder.tvAccmulate.setText(products.get(position).accmulate);
+        holder.tvDistance.setText(products.get(position).contents);
+        //holder.tvType.setText(products.get(position).type);
+        //holder.tvTime.setText(products.get(position).time);
+        //holder.tvDistance.setText(products.get(position).distance);
+        //holder.tvAccmulate.setText(products.get(position).accmulate);
     }
 
     // Return the size of your dataset (invoked by the layout manager)

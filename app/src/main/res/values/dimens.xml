@@ -14,13 +14,13 @@
     <dimen name="fragment_user_title_font_size">26sp</dimen>
 
     <dimen name="fragment_home_search_font_size">18sp</dimen>
-    <dimen name="fragment_home_language_font_size">18sp</dimen>
-    <dimen name="fragment_home_product_title_font_size">27sp</dimen>
-    <dimen name="fragment_home_product_date_font_size">24sp</dimen>
-    <dimen name="fragment_home_product_normal_font_size">20sp</dimen>
+    <dimen name="fragment_home_language_font_size">15sp</dimen>
+    <dimen name="fragment_home_product_title_font_size">18sp</dimen>
+    <dimen name="fragment_home_product_date_font_size">18sp</dimen>
+    <dimen name="fragment_home_product_normal_font_size">14sp</dimen>
 
-    <dimen name="expandable_parent_item_font_size">25sp</dimen>
-    <dimen name="recycler_title_font_size">26sp</dimen>
-    <dimen name="recycler_normal_font_size">20sp</dimen>
+    <dimen name="expandable_parent_item_font_size">22sp</dimen>
+    <dimen name="recycler_title_font_size">22sp</dimen>
+    <dimen name="recycler_normal_font_size">14sp</dimen>
 
 </resources>

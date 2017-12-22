@@ -31,6 +31,7 @@ import com.example.taehyung.ddac.Item.ParentItem;
 import com.example.taehyung.ddac.Item.TypeItem;
 import com.example.taehyung.ddac.MainActivity;
 import com.example.taehyung.ddac.R;
+import com.google.android.gms.maps.GoogleMap;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -55,6 +56,11 @@ public class DdacFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        //No call for super(). Bug on API Level > 11.
     }
 
     @Override
@@ -100,6 +106,24 @@ public class DdacFragment extends Fragment {
         expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                switch(groupPosition){
+                    case 1:
+                        Intent intent = new Intent(getActivity(), GoogleMapActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        Intent intent1 = new Intent(getActivity(), GoogleMapActivity.class);
+                        startActivity(intent1);
+                        break;
+                    case 5:
+                        Intent intent2 = new Intent(getActivity(), GoogleMapActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case 6:
+                        Intent intent3 = new Intent(getActivity(), GoogleMapActivity.class);
+                        startActivity(intent3);
+                        break;
+                }
                 return false;
             }
         });

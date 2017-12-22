@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.taehyung.ddac.Fragment.DdacFragment;
-import com.example.taehyung.ddac.Fragment.DictionaryFragment;
 import com.example.taehyung.ddac.Fragment.HomeFragment;
-import com.example.taehyung.ddac.Fragment.PopularFragment;
 import com.example.taehyung.ddac.Fragment.UserFragment;
 
 /**
@@ -20,13 +18,12 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.MenuItem;
 
 public class DDACMainActivity extends AppCompatActivity {
-
+    public static BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BottomNavigationView bottomNavigationView = (BottomNavigationView)
-                findViewById(R.id.navigation);
+        bottomNavigationView = (BottomNavigationView)findViewById(R.id.navigation);
 
         bottomNavigationView.setOnNavigationItemSelectedListener
                 (new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -37,14 +34,8 @@ public class DDACMainActivity extends AppCompatActivity {
                             case R.id.action_item1:
                                 selectedFragment = HomeFragment.newInstance();
                                 break;
-                            case R.id.action_item2:
-                                selectedFragment = PopularFragment.newInstance();
-                                break;
                             case R.id.action_item3:
                                 selectedFragment = DdacFragment.newInstance();
-                                break;
-                            case R.id.action_item4:
-                                selectedFragment = DictionaryFragment.newInstance();
                                 break;
                             case R.id.action_item5:
                                 selectedFragment = UserFragment.newInstance();
@@ -59,5 +50,6 @@ public class DDACMainActivity extends AppCompatActivity {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_layout, HomeFragment.newInstance());
         transaction.commit();
+
     }
 }

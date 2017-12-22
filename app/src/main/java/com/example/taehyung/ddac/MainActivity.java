@@ -1,8 +1,12 @@
 package com.example.taehyung.ddac;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -11,20 +15,32 @@ import android.widget.Toast;
 
 import java.util.Locale;
 import android.os.Handler;
+import android.widget.VideoView;
+
 import java.util.logging.LogRecord;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnLogin, btnFindIdAndPwd, btnRegister;
+    private  Button btnLogin, btnFindIdAndPwd, btnRegister;
     private String TAG ="KTH";
-    EditText etId;
+    private  EditText etId;
     public static Handler mHandler = new Handler();
-    EditText etPassword;
+    private  EditText etPassword;
+    private VideoView videoView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        resourceInit();
-        registerListener();
+        setContentView(R.layout.simple_video);
+        videoView = findViewById(R.id.simple_video_view);
+        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/raw/ddac_intro"));
+        videoView.start();
+        videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                setContentView(R.layout.activity_login);
+                resourceInit();
+                registerListener();
+            }
+        });
         // Log.d(TAG, Locale.getDefault().getLanguage());
 //        this.finish();
 //        Intent intent = new Intent(this, DDACMainActivity.class);
